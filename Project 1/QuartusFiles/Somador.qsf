@@ -1,0 +1,131 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 18:54:16  August 31, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Somador_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY Somador
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:54:16  AUGUST 31, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE Soma1bit.vhd
+set_global_assignment -name VHDL_FILE Soma4bits.vhd
+set_global_assignment -name VHDL_FILE DisplayHEX7Seg.vhd
+set_global_assignment -name VHDL_FILE Compl1.vhd
+set_global_assignment -name VHDL_FILE Somador.vhd
+set_location_assignment PIN_C10 -to A0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A3
+set_location_assignment PIN_C11 -to A1
+set_location_assignment PIN_D12 -to A2
+set_location_assignment PIN_C12 -to A3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Switch
+set_location_assignment PIN_A12 -to Switch
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B0
+set_location_assignment PIN_A13 -to B0
+set_location_assignment PIN_A14 -to B1
+set_location_assignment PIN_B14 -to B2
+set_location_assignment PIN_F15 -to B3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAa
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAb
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAe
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAf
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAg
+set_location_assignment PIN_C14 -to DAa
+set_location_assignment PIN_E15 -to DAb
+set_location_assignment PIN_C15 -to DAc
+set_location_assignment PIN_C16 -to DAd
+set_location_assignment PIN_E16 -to DAe
+set_location_assignment PIN_D17 -to DAf
+set_location_assignment PIN_C17 -to DAg
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBa
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBb
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBe
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBf
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DBg
+set_location_assignment PIN_B20 -to DBa
+set_location_assignment PIN_A20 -to DBb
+set_location_assignment PIN_B19 -to DBc
+set_location_assignment PIN_A21 -to DBd
+set_location_assignment PIN_B21 -to DBe
+set_location_assignment PIN_C22 -to DBf
+set_location_assignment PIN_B22 -to DBg
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSa
+set_location_assignment PIN_F18 -to DSa
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSb
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSe
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSf
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSg
+set_location_assignment PIN_E20 -to DSb
+set_location_assignment PIN_E19 -to DSc
+set_location_assignment PIN_J18 -to DSd
+set_location_assignment PIN_H19 -to DSe
+set_location_assignment PIN_F19 -to DSf
+set_location_assignment PIN_F20 -to DSg
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCa
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCb
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCe
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCf
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DCg
+set_location_assignment PIN_J20 -to DCa
+set_location_assignment PIN_K20 -to DCb
+set_location_assignment PIN_L18 -to DCc
+set_location_assignment PIN_N18 -to DCd
+set_location_assignment PIN_M20 -to DCe
+set_location_assignment PIN_N19 -to DCf
+set_location_assignment PIN_N20 -to DCg
+set_global_assignment -name VECTOR_WAVEFORM_FILE Somador.vwf
