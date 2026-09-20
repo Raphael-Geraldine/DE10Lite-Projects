@@ -1,0 +1,177 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 16:24:03  September 20, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		RegSipoPiso_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY RegSipoPiso
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:24:03  SEPTEMBER 20, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE MyDLatch.vhd
+set_global_assignment -name VHDL_FILE Mux2.vhd
+set_global_assignment -name VHDL_FILE DisplayHEX7Seg.vhd
+set_global_assignment -name VHDL_FILE SIPO.vhd
+set_global_assignment -name VHDL_FILE PISO.vhd
+set_global_assignment -name VHDL_FILE RegSipoPiso.vhd
+# --- Chaves (Switches) InSwitch(7 downto 0) ---
+set_location_assignment PIN_C10 -to InSwitch[0]
+set_location_assignment PIN_C11 -to InSwitch[1]
+set_location_assignment PIN_D12 -to InSwitch[2]
+set_location_assignment PIN_C12 -to InSwitch[3]
+set_location_assignment PIN_A12 -to InSwitch[4]
+set_location_assignment PIN_B12 -to InSwitch[5]
+set_location_assignment PIN_A13 -to InSwitch[6]
+set_location_assignment PIN_A14 -to InSwitch[7]
+
+# --- Chave Extra para o Output Enable (OutActive) ---
+set_location_assignment PIN_B14 -to OutActive
+
+# --- Botões (Keys) ---
+set_location_assignment PIN_B8  -to Key0
+set_location_assignment PIN_A7  -to Key1
+
+# --- LEDs de Monitoramento (SpyLeds 7 downto 0) ---
+set_location_assignment PIN_A8  -to SpyLeds[0]
+set_location_assignment PIN_A9  -to SpyLeds[1]
+set_location_assignment PIN_A10 -to SpyLeds[2]
+set_location_assignment PIN_B10 -to SpyLeds[3]
+set_location_assignment PIN_D13 -to SpyLeds[4]
+set_location_assignment PIN_C13 -to SpyLeds[5]
+set_location_assignment PIN_E14 -to SpyLeds[6]
+set_location_assignment PIN_D14 -to SpyLeds[7]
+
+# --- Display HEX0 (Dis0) ---
+set_location_assignment PIN_C14 -to Dis0[0]
+set_location_assignment PIN_E15 -to Dis0[1]
+set_location_assignment PIN_C15 -to Dis0[2]
+set_location_assignment PIN_C16 -to Dis0[3]
+set_location_assignment PIN_E16 -to Dis0[4]
+set_location_assignment PIN_D17 -to Dis0[5]
+set_location_assignment PIN_C17 -to Dis0[6]
+
+# --- Display HEX1 (Dis1) ---
+set_location_assignment PIN_C18 -to Dis1[0]
+set_location_assignment PIN_D18 -to Dis1[1]
+set_location_assignment PIN_E18 -to Dis1[2]
+set_location_assignment PIN_B16 -to Dis1[3]
+set_location_assignment PIN_A17 -to Dis1[4]
+set_location_assignment PIN_A18 -to Dis1[5]
+set_location_assignment PIN_B17 -to Dis1[6]
+
+# --- Display HEX4 (Dis4) ---
+set_location_assignment PIN_F18 -to Dis4[0]
+set_location_assignment PIN_E20 -to Dis4[1]
+set_location_assignment PIN_E19 -to Dis4[2]
+set_location_assignment PIN_J18 -to Dis4[3]
+set_location_assignment PIN_H19 -to Dis4[4]
+set_location_assignment PIN_F19 -to Dis4[5]
+set_location_assignment PIN_F20 -to Dis4[6]
+
+# --- Display HEX5 (Dis5) ---
+set_location_assignment PIN_J20 -to Dis5[0]
+set_location_assignment PIN_K20 -to Dis5[1]
+set_location_assignment PIN_L18 -to Dis5[2]
+set_location_assignment PIN_N18 -to Dis5[3]
+set_location_assignment PIN_M20 -to Dis5[4]
+set_location_assignment PIN_N19 -to Dis5[5]
+set_location_assignment PIN_N20 -to Dis5[6]
+
+# --- Padrão de I/O para os Botões e Entradas ---
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to Key0
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to Key1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OutActive
+
+# --- Padrão de I/O para as Chaves (InSwitch) ---
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to InSwitch[7]
+
+# --- Padrão de I/O para os LEDs (SpyLeds) ---
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SpyLeds[7]
+
+# --- Padrão de I/O para os Displays de 7 Segmentos ---
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis0[6]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis1[6]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis4[6]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dis5[6]
