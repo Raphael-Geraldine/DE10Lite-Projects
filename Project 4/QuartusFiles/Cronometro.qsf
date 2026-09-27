@@ -174,7 +174,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hex5[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hex5[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hex5[6]
 
-# Chave SW0 - Seletor de Base Temporal (0 = 1 kHz Normal / 1 = Turbo ~80 kHz)
+# Chave SW0 - Seletor de Base Temporal (0 = 1 kHz Normal / 1 = Turbo 80 kHz)
 set_location_assignment PIN_C10 -to switch
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switch
 
@@ -187,7 +187,6 @@ set_global_assignment -name VHDL_FILE Minutos.vhd
 
 # ==============================================================================
 # Botoes Push-Button (KEY0 e KEY1)
-# Observacao: Na DE10-Lite os botoes sao ATIVOS EM BAIXO (pressionado = '0')
 # ==============================================================================
 
 set_location_assignment PIN_B8 -to PB0
