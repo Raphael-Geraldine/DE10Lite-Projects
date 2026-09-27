@@ -10,9 +10,7 @@ end raPause;
 
 architecture verify of raPause is
     begin
-
         -- quando der: 820089 (1000 - 0010 - 0000 - 0000 - 1000 - 1001)
-        -- pois últimos 6 dígitos do meu ra: 780089
 
         S <= numToDis5(3) and (not numToDis5(2)) and (not numToDis5(1)) and (not numToDis5(0)) and 
         (not numToDis4(3)) and (not numToDis4(2)) and numToDis4(1) and (not numToDis4(0)) and 
